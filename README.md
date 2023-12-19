@@ -1,7 +1,7 @@
 # Prerequisites
 
  - Install Rust: https://rustup.rs
- - Install Cross: `cargo install cross`
+ - Install Cross: `cargo install cross --git https://github.com/cross-rs/cross`
  - Install Docker
 
 # Run locally
