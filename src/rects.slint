@@ -1,0 +1,27 @@
+export component Demo {
+    preferred-width: 400px;
+    preferred-height: 400px;
+    property <length> spacing: 10px;
+    property <length> rect-size: 100px;
+    property <int> column-count: floor(self.width / (self.rect-size + self.spacing));
+    property <int> rects: 1;
+    for i in rects: Rectangle {
+        x: mod(i, root.column-count) * (root.rect-size + root.spacing);
+        y: floor(i / root.column-count) * (root.rect-size + root.spacing);
+        width: root.rect-size;
+        height: root.rect-size;
+        background: red;
+    }
+
+    Text {
+        x: 0px;
+        y: 0px;
+        text: "\{rects} Rectangles. Tap to add more.";
+    }
+
+    TouchArea {
+        clicked => {
+            root.rects += 1;
+        }
+    }
+}
