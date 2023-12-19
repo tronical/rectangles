@@ -11,6 +11,7 @@ export component Demo {
         width: root.rect-size;
         height: root.rect-size;
         background: red;
+        opacity: 0.9 - 0.8 * Math.mod(12 * animation-tick() / 1s - i, 12) / 12;
     }
 
     Text {
