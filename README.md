@@ -10,8 +10,8 @@
 
 # Build for armv7
 
-`cross build --target=armv7-unknown-linux-gnueabihf`
+`cross build --target=armv7-unknown-linux-gnueabihf --release`
 
 # Build for armv8
 
-`cross build --target=aarch64-unknown-linux-gnu`
+`cross build --target=aarch64-unknown-linux-gnu --release`
