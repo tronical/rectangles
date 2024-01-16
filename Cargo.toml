@@ -7,3 +7,6 @@ edition = "2021"
 
 [dependencies]
 slint = { version = "1.3.2", git = "https://github.com/slint-ui/slint", branch = "master", features = ["backend-linuxkms-noseat", "renderer-skia-opengl"] }
+
+[profile.release]
+strip = true
